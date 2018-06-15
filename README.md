@@ -44,7 +44,7 @@ We created a number of plots to visually inspect our data, found in the EDA note
 
 We tested several variations of machine learning models in an effort to maximize the receiver operating characteristic area under the curve (ROC AUC). The ROC AUC is a measure of the ability of a classifier to distinguish between two or more classes; a classifier that randomly guesses (for binary classification) will achieve a ROC AUC of 0.5; one that classifies perfectly will score 1.0. The table below lists a selection of the tested models and their corresponding ROC AUC scores:
 
-model|Kaggle Private Score|Kaggle Public score | Local Training Score | Local Validation Score
+Model|Kaggle Private Score|Kaggle Public Score | Local Training Score | Local Validation Score
 --|--|--|--|--|
 Logistic Regression| .5| .5| .72451| .69808
 Logistic Regression (w/PCA)|0.55512 |.55122 | .69745| .71369
@@ -67,7 +67,7 @@ The huge disparity between our local scores and the Kaggle scores indicate that 
 > There is a fair amount of missing data in the weather information, so it would probably be worthwhile to track down the true missing values, if they can be found. 
  
 1. Use the spray data as an intermediary step rather than a feature
-> Currenlty we are using the spray data as an engineered feature indicating whether a trap has ever been sprayed (we consider a trap to have been sprayed if there is a spray location within an eighth of a mile). This is certainly straightforward but possibly too coarse and could be a large source of noise. Alternatively we could, as an intermediary step, create a classificaiton model that tries to predict whether or not a trap was sprayed on other days based on the weather. This would also run the risk of being very noisy.
+> Currently we are using the spray data as an engineered feature indicating whether a trap has ever been sprayed (we consider a trap to have been sprayed if there is a spray location within an eighth of a mile). This is certainly straightforward but possibly too coarse and could be a large source of noise. Alternatively we could, as an intermediary step, create a classificaiton model that tries to predict whether or not a trap was sprayed on other days based on the weather. This would also run the risk of being very noisy.
 
 
 ## Recommendations 
