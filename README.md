@@ -63,10 +63,10 @@ The huge disparity between our local scores and the Kaggle scores indicate that 
 1. Restructure the data
 > Since our local score are so different than the Kaggle scores, we are likely just modeling the noise present in the data. More work should be done to address this. For example we might try to adjust the way the weather data is taken into account for each observation. Currently we are assigning weather features to a given trap based on which airport it is closest to. This could be causing an issue as many of the traps are not particularly close to either airport. One approach would be to simply average the weather information, perhaps weighted by distance to the given source of the measurement. Another option would be just to add the weather information for both airports to each of the observations, completely ignoring the distance to the source.
 
-1. Get more, cleaner data
+2. Get more, cleaner data
 > There is a fair amount of missing data in the weather information, so it would probably be worthwhile to track down the true missing values, if they can be found. 
  
-1. Use the spray data as an intermediary step rather than a feature
+3. Use the spray data as an intermediary step rather than a feature
 > Currently we are using the spray data as an engineered feature indicating whether a trap has ever been sprayed (we consider a trap to have been sprayed if there is a spray location within an eighth of a mile). This is certainly straightforward but possibly too coarse and could be a large source of noise. Alternatively we could, as an intermediary step, create a classificaiton model that tries to predict whether or not a trap was sprayed on other days based on the weather. This would also run the risk of being very noisy.
 
 
